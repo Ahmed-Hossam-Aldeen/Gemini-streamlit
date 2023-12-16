@@ -1,0 +1,4 @@
+google-generativeai
+Pillow
+protobuf==3.25.1
+streamlit
