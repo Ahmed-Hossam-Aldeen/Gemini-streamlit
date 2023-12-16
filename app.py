@@ -9,7 +9,6 @@ from PIL import Image
 
 
 # Set up the Gemini AI API
-API_KEY = "AIzaSyBtZVgZ0eIW2NvPXS8RPlZaJRVrHjGlJnI"
 genai.configure(api_key=API_KEY)
 text_model = genai.GenerativeModel('gemini-pro')
 vision_model = genai.GenerativeModel('gemini-pro-vision')
