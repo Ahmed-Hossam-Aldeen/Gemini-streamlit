@@ -13,7 +13,7 @@ API_KEY = st.secrets["API_KEY"]
 genai.configure(api_key=API_KEY)
 text_model = genai.GenerativeModel('gemini-pro')
 vision_model = genai.GenerativeModel('gemini-pro-vision')
-
+chat = text_model.start_chat()
 
 # Streamlit app
 st.title("Gemini AI App")
@@ -43,7 +43,7 @@ elif option == 'Gemini pro vision':
 
 elif option == 'Conversation':
     prompt = st.text_input(label='Enter your prompt')
-    chat = text_model.start_chat()
+    
     if st.button("Ask Gemini"):
         # Send the prompt to the model
         response = chat.send_message(prompt)
