@@ -12,6 +12,7 @@ from PIL import Image
 API_KEY = st.secrets["API_KEY"]
 genai.configure(api_key=API_KEY)
 text_model = genai.GenerativeModel('gemini-pro')
+chat = text_model.start_chat(history=[])
 vision_model = genai.GenerativeModel('gemini-pro-vision')
 
 
@@ -43,7 +44,6 @@ elif option == 'Gemini pro vision':
 
 elif option == 'Conversation':
     prompt = st.text_input(label='Enter your prompt')
-    chat = text_model.start_chat(history=[])
     if st.button("Ask Gemini"):
             response = chat.send_message(prompt)
             for message in chat.history:
