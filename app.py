@@ -46,8 +46,7 @@ elif option == 'Conversation':
     prompt = st.text_input(label='Enter your prompt')
     if st.button("Ask Gemini"):
             response = chat.send_message(prompt)
-            for message in chat.history:
-                 st.write(f'**{message.role}**: {message.parts[0].text}')
+            st.write(chat.history)
 #########################################################
 st.markdown("<h1 style='font-size:15px; text-align: center; color: red; font-family:SansSerif;'>Made with 💖 By Ahmed Hossam</h1>", unsafe_allow_html=True)
 st.markdown("[My Github](https://github.com/Ahmed-Hossam-Aldeen)")
