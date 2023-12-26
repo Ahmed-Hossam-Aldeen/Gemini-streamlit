@@ -43,18 +43,13 @@ elif option == 'Gemini pro vision':
 
 elif option == 'Conversation':
     prompt = st.text_input(label='Enter your prompt')
-    chat = text_model.start_chat(history=[])
+    chat = text_model.start_chat()
     if st.button("Ask Gemini"):
         # Send the prompt to the model
         response = chat.send_message(prompt)
-
-        # Update the chat history with the current turn
-        chat_history = chat.history
-        chat_history.append(response)
-
         # Display the chat history
-        st.write(len(chat_history))
-        st.write(chat_history)
+        st.write(len(chat.history))
+        st.write(chat.history)
 #########################################################
 st.markdown("<h1 style='font-size:15px; text-align: center; color: red; font-family:SansSerif;'>Made with 💖 By Ahmed Hossam</h1>", unsafe_allow_html=True)
 st.markdown("[My Github](https://github.com/Ahmed-Hossam-Aldeen)")
