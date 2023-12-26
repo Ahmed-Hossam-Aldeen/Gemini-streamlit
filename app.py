@@ -53,7 +53,7 @@ elif option == 'Conversation':
         chat_history.append(response)
 
         # Display the chat history
-        st.write(chat_history)
+        st.write(len(chat_history))
 #########################################################
 st.markdown("<h1 style='font-size:15px; text-align: center; color: red; font-family:SansSerif;'>Made with 💖 By Ahmed Hossam</h1>", unsafe_allow_html=True)
 st.markdown("[My Github](https://github.com/Ahmed-Hossam-Aldeen)")
